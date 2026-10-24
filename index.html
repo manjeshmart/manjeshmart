@@ -24,7 +24,10 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
 
     body {
       font-family: Arial, "Noto Sans Devanagari", sans-serif;
@@ -37,7 +40,10 @@
     button { font: inherit; }
     img { max-width: 100%; }
 
-    .container { width: min(1160px, 90%); margin: auto; }
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
 
     .announcement {
       background: var(--deep);
@@ -55,7 +61,7 @@
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 100;
     }
 
     .nav {
@@ -96,6 +102,7 @@
     .brand-name span { color: var(--orange); }
 
     .brand-tagline {
+      display: block;
       font-size: 9px;
       letter-spacing: 1px;
       color: var(--muted);
@@ -103,6 +110,7 @@
       margin-top: 4px;
     }
 
+    /* Desktop navigation */
     .nav-links {
       display: flex;
       align-items: center;
@@ -116,6 +124,31 @@
     }
 
     .nav-links a:hover { color: var(--orange); }
+
+    /* Three-dot mobile menu button */
+    .menu-toggle {
+      display: none;
+      width: 43px;
+      height: 43px;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: white;
+      color: var(--green);
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 5px;
+      height: 5px;
+      background: var(--green);
+      border-radius: 50%;
+    }
 
     .btn {
       display: inline-flex;
@@ -135,7 +168,11 @@
 
     .btn-green { background: var(--green); color: white; }
     .btn-green:hover { background: var(--deep); }
-    .btn-outline { border-color: #b8cbbb; color: var(--green); background: white; }
+    .btn-outline {
+      border-color: #b8cbbb;
+      color: var(--green);
+      background: white;
+    }
     .btn-orange { background: var(--orange); color: white; }
 
     .hero {
@@ -193,7 +230,11 @@
       margin-bottom: 27px;
     }
 
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
     .hero-note {
       margin-top: 23px;
@@ -275,11 +316,18 @@
       font-size: 21px;
     }
 
-    .trust-item strong { display: block; font-size: 13px; color: var(--green); }
-    .trust-item small { color: var(--muted); font-size: 11px; }
+    .trust-item strong {
+      display: block;
+      font-size: 13px;
+      color: var(--green);
+    }
+
+    .trust-item small {
+      color: var(--muted);
+      font-size: 11px;
+    }
 
     .section { padding: 78px 0; }
-
     .section-soft { background: var(--cream); }
 
     .section-head {
@@ -336,9 +384,21 @@
       margin-bottom: 19px;
     }
 
-    .service-card h3 { color: var(--green); font-size: 18px; margin-bottom: 9px; }
+    .service-card h3 {
+      color: var(--green);
+      font-size: 18px;
+      margin-bottom: 9px;
+    }
+
     .service-card p { color: var(--muted); font-size: 13px; }
-    .card-link { display: inline-block; color: var(--green); font-size: 12px; font-weight: 800; margin-top: 18px; }
+
+    .card-link {
+      display: inline-block;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      margin-top: 18px;
+    }
 
     .about-grid {
       display: grid;
@@ -368,11 +428,26 @@
       margin: 12px 0 17px;
     }
 
-    .about-copy p { color: var(--muted); font-size: 14px; margin-bottom: 13px; }
+    .about-copy p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 13px;
+    }
 
     .check-list { list-style: none; margin: 20px 0 25px; }
-    .check-list li { margin: 10px 0; font-size: 13px; font-weight: 700; }
-    .check-list li::before { content: "✓"; color: #23834a; font-weight: 900; margin-right: 10px; }
+
+    .check-list li {
+      margin: 10px 0;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      color: #23834a;
+      font-weight: 900;
+      margin-right: 10px;
+    }
 
     .area-panel {
       padding: 35px;
@@ -402,21 +477,47 @@
       background: white;
     }
 
-    .partner-card h3 { color: var(--green); font-size: 19px; margin: 12px 0 8px; }
-    .partner-card p { color: var(--muted); font-size: 13px; margin-bottom: 19px; }
+    .partner-card h3 {
+      color: var(--green);
+      font-size: 19px;
+      margin: 12px 0 8px;
+    }
+
+    .partner-card p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 19px;
+    }
 
     .faq-list { max-width: 800px; margin: auto; }
-    details { border-bottom: 1px solid var(--border); padding: 19px 0; }
-    summary { cursor: pointer; font-weight: 800; color: var(--green); font-size: 14px; }
-    details p { color: var(--muted); font-size: 13px; padding-top: 12px; }
+
+    details {
+      border-bottom: 1px solid var(--border);
+      padding: 19px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--green);
+      font-size: 14px;
+    }
+
+    details p {
+      color: var(--muted);
+      font-size: 13px;
+      padding-top: 12px;
+    }
 
     .cta { padding: 65px 0; background: #fff5e8; }
+
     .cta-box {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 25px;
     }
+
     .cta h2 { color: var(--deep); font-size: clamp(25px, 4vw, 36px); }
     .cta p { color: var(--muted); font-size: 13px; margin-top: 7px; }
 
@@ -435,14 +536,32 @@
 
     .footer .brand-name { color: white; }
     .footer .brand-tagline { color: #c2d2c5; }
-    .footer-about { color: #bdcfc0; font-size: 12px; margin: 18px 0; max-width: 290px; }
+
+    .footer-about {
+      color: #bdcfc0;
+      font-size: 12px;
+      margin: 18px 0;
+      max-width: 290px;
+    }
+
     .footer h3 { font-size: 14px; margin-bottom: 18px; color: white; }
     .footer-links { display: grid; gap: 10px; }
-    .footer-links a, .footer-contact p { color: #bdcfc0; font-size: 12px; }
+
+    .footer-links a,
+    .footer-contact p {
+      color: #bdcfc0;
+      font-size: 12px;
+    }
+
     .footer-links a:hover { color: #ffb56c; }
-    .footer-contact p { margin-bottom: 10px; overflow-wrap: anywhere; }
+
+    .footer-contact p {
+      margin-bottom: 10px;
+      overflow-wrap: anywhere;
+    }
 
     .socials { display: flex; gap: 9px; margin-top: 17px; }
+
     .socials a {
       display: grid;
       place-items: center;
@@ -476,15 +595,60 @@
       .footer-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
+    /* Mobile layout and dropdown navigation */
     @media (max-width: 650px) {
       .container { width: 91%; }
       .announcement { font-size: 10px; }
-      .nav { min-height: 72px; flex-wrap: wrap; padding: 12px 0; gap: 12px; }
-      .brand-mark { width: 39px; height: 39px; font-size: 21px; }
+
+      .nav {
+        min-height: 72px;
+        flex-wrap: wrap;
+        padding: 12px 0;
+        gap: 12px;
+        position: relative;
+      }
+
+      .brand-mark {
+        width: 39px;
+        height: 39px;
+        font-size: 21px;
+      }
+
       .brand-name { font-size: 18px; }
       .brand-tagline { font-size: 8px; }
-      .nav-links { width: 100%; overflow-x: auto; gap: 21px; padding: 3px 0 8px; }
-      .nav-links a { white-space: nowrap; }
+
+      .menu-toggle { display: flex; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 8px 14px;
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 0 0 14px 14px;
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        overflow: visible;
+        z-index: 200;
+      }
+
+      .nav-links.menu-open { display: flex; }
+
+      .nav-links a {
+        display: block;
+        white-space: normal;
+        padding: 11px 5px;
+        font-size: 14px;
+        border-bottom: 1px solid #edf1eb;
+      }
+
+      .nav-links a:last-child { border-bottom: none; }
       .nav > .btn { display: none; }
 
       .hero { padding: 49px 0 42px; }
@@ -497,7 +661,12 @@
       .float-one { left: 0; top: 30px; }
       .float-two { right: 0; bottom: 24px; }
 
-      .trust-grid { grid-template-columns: 1fr; gap: 16px; padding: 22px 0; }
+      .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 22px 0;
+      }
+
       .trust-item { justify-content: flex-start; }
       .section { padding: 55px 0; }
       .card-grid { grid-template-columns: 1fr; gap: 15px; }
@@ -509,10 +678,21 @@
       .area-panel h2 { font-size: 25px; }
       .partner-grid { grid-template-columns: 1fr; }
       .cta-box { flex-direction: column; align-items: flex-start; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 20px;
+      }
+
       .footer-grid > div:first-child { grid-column: 1 / -1; }
       .footer { padding-top: 43px; }
       .footer-bottom { flex-direction: column; }
+    }
+
+    /* Desktop mode keeps the full navigation visible */
+    @media (min-width: 651px) {
+      .menu-toggle { display: none; }
+      .nav-links { display: flex; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -537,7 +717,20 @@
         </span>
       </a>
 
-      <nav class="nav-links" aria-label="Main navigation">
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="नेविगेशन मेनू खोलें"
+        aria-expanded="false"
+        aria-controls="main-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="main-menu" aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#about">About Us</a>
@@ -554,7 +747,9 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow"><span class="dot"></span> YOUR LOCAL GROCERY PARTNER</div>
+          <div class="eyebrow">
+            <span class="dot"></span> YOUR LOCAL GROCERY PARTNER
+          </div>
 
           <h1>ताज़ा सामान,<br><span>हर घर तक!</span></h1>
 
@@ -569,15 +764,23 @@
             <a href="#contact" class="btn btn-outline">संपर्क करें</a>
           </div>
 
-          <p class="hero-note">स्थानीय सेवा • रोजमर्रा की जरूरतें • घर तक डिलीवरी</p>
+          <p class="hero-note">
+            स्थानीय सेवा • रोजमर्रा की जरूरतें • घर तक डिलीवरी
+          </p>
         </div>
 
         <div class="hero-visual" aria-label="Grocery shopping illustration">
           <div class="visual-circle">
             <div class="basket-icon" aria-hidden="true">🛒</div>
           </div>
-          <div class="floating-card float-one">🥬 ताजी सब्जियां<small>उपलब्धता के अनुसार</small></div>
-          <div class="floating-card float-two">🏠 Home Delivery<small>स्थानीय सेवा क्षेत्र में</small></div>
+          <div class="floating-card float-one">
+            🥬 ताजी सब्जियां
+            <small>उपलब्धता के अनुसार</small>
+          </div>
+          <div class="floating-card float-two">
+            🏠 Home Delivery
+            <small>स्थानीय सेवा क्षेत्र में</small>
+          </div>
         </div>
       </div>
     </section>
@@ -586,15 +789,26 @@
       <div class="container trust-grid">
         <div class="trust-item">
           <span class="trust-icon">🛍️</span>
-          <span><strong>रोजमर्रा की खरीदारी</strong><small>जरूरी सामान एक जगह</small></span>
+          <span>
+            <strong>रोजमर्रा की खरीदारी</strong>
+            <small>जरूरी सामान एक जगह</small>
+          </span>
         </div>
+
         <div class="trust-item">
           <span class="trust-icon">🤝</span>
-          <span><strong>स्थानीय सहयोग</strong><small>स्थानीय सप्लायरों के साथ</small></span>
+          <span>
+            <strong>स्थानीय सहयोग</strong>
+            <small>स्थानीय सप्लायरों के साथ</small>
+          </span>
         </div>
+
         <div class="trust-item">
           <span class="trust-icon">🚚</span>
-          <span><strong>घर तक डिलीवरी</strong><small>सेवा क्षेत्र के अनुसार</small></span>
+          <span>
+            <strong>घर तक डिलीवरी</strong>
+            <small>सेवा क्षेत्र के अनुसार</small>
+          </span>
         </div>
       </div>
     </div>
@@ -654,11 +868,13 @@
             हम ग्राहकों के भरोसे, उपयोगी सेवा और स्पष्ट जानकारी को
             प्राथमिकता देते हैं।
           </p>
+
           <ul class="check-list">
             <li>रोजमर्रा की जरूरतों पर ध्यान</li>
             <li>स्थानीय दुकानदारों और सप्लायरों से सहयोग</li>
             <li>ग्राहक सुविधा और भरोसे को प्राथमिकता</li>
           </ul>
+
           <a href="#contact" class="btn btn-green">हमसे जुड़ें →</a>
         </div>
       </div>
@@ -693,15 +909,25 @@
           <article class="partner-card">
             <div class="service-icon">🏪</div>
             <h3>Supplier & Shop Partners</h3>
-            <p>स्थानीय दुकानदार और सप्लायर हमारे साथ जुड़ने के लिए संपर्क कर सकते हैं। साझेदारी उपलब्धता और शर्तों के अधीन होगी।</p>
-            <a class="btn btn-outline" href="mailto:support.manjeshmart@gmail.com?subject=MANJESH%20MART%20Supplier%20Partnership">पार्टनरशिप पूछें ↗</a>
+            <p>
+              स्थानीय दुकानदार और सप्लायर हमारे साथ जुड़ने के लिए संपर्क कर सकते हैं।
+              साझेदारी उपलब्धता और शर्तों के अधीन होगी।
+            </p>
+            <a class="btn btn-outline" href="mailto:support.manjeshmart@gmail.com?subject=MANJESH%20MART%20Supplier%20Partnership">
+              पार्टनरशिप पूछें ↗
+            </a>
           </article>
 
           <article class="partner-card">
             <div class="service-icon">🛵</div>
             <h3>Delivery Partner</h3>
-            <p>डिलीवरी पार्टनर बनने के अवसरों की जानकारी के लिए हमें ईमेल करें। अवसर क्षेत्र और जरूरत के अनुसार होंगे।</p>
-            <a class="btn btn-outline" href="mailto:support.manjeshmart@gmail.com?subject=MANJESH%20MART%20Delivery%20Partner">रुचि दर्ज करें ↗</a>
+            <p>
+              डिलीवरी पार्टनर बनने के अवसरों की जानकारी के लिए हमें ईमेल करें।
+              अवसर क्षेत्र और जरूरत के अनुसार होंगे।
+            </p>
+            <a class="btn btn-outline" href="mailto:support.manjeshmart@gmail.com?subject=MANJESH%20MART%20Delivery%20Partner">
+              रुचि दर्ज करें ↗
+            </a>
           </article>
         </div>
       </div>
@@ -720,14 +946,17 @@
             <summary>MANJESH MART क्या है?</summary>
             <p>यह किराना, फल, सब्जियां और रोजमर्रा की जरूरतों के सामान के लिए स्थानीय डिलीवरी सेवा है।</p>
           </details>
+
           <details>
             <summary>क्या मेरे इलाके में डिलीवरी उपलब्ध है?</summary>
             <p>डिलीवरी सिकटा और शांति चौक के निर्धारित क्षेत्रों में उपलब्धता के अनुसार होती है। ऑर्डर से पहले अपने क्षेत्र की पुष्टि करें।</p>
           </details>
+
           <details>
             <summary>सप्लायर या डिलीवरी पार्टनर कैसे जुड़ सकते हैं?</summary>
             <p>अपनी जानकारी support.manjeshmart@gmail.com पर भेजें। हमारी टीम उपलब्ध अवसरों और शर्तों के अनुसार जवाब दे सकती है।</p>
           </details>
+
           <details>
             <summary>ऑर्डर या सहायता के लिए कैसे संपर्क करें?</summary>
             <p>आप support.manjeshmart@gmail.com पर ईमेल कर सकते हैं।</p>
@@ -743,7 +972,9 @@
           <h2>आपकी सुविधा, हमारा प्रयास।</h2>
           <p>ऑर्डर, सेवा और साझेदारी से जुड़ी जानकारी के लिए संपर्क करें।</p>
         </div>
-        <a class="btn btn-green" href="mailto:support.manjeshmart@gmail.com">ईमेल से संपर्क करें ↗</a>
+        <a class="btn btn-green" href="mailto:support.manjeshmart@gmail.com">
+          ईमेल से संपर्क करें ↗
+        </a>
       </div>
     </section>
   </main>
@@ -794,6 +1025,7 @@
           <p>✉ support.manjeshmart@gmail.com</p>
           <p>📍 Service area: Sikta & Shanti Chowk, Bihar</p>
           <p>🕒 Delivery depends on local availability.</p>
+
           <div class="socials">
             <a href="https://www.instagram.com/manjeshmart.in/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
             <a href="https://www.youtube.com/@manjesh-mart" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YT</a>
@@ -811,6 +1043,38 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const mainMenu = document.getElementById("main-menu");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = mainMenu.classList.toggle("menu-open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "नेविगेशन मेनू बंद करें" : "नेविगेशन मेनू खोलें"
+      );
+    });
+
+    mainMenu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainMenu.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "नेविगेशन मेनू खोलें");
+      });
+    });
+
+    document.addEventListener("click", function (event) {
+      if (
+        !mainMenu.contains(event.target) &&
+        !menuToggle.contains(event.target)
+      ) {
+        mainMenu.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "नेविगेशन मेनू खोलें");
+      }
+    });
   </script>
 </body>
 </html>
