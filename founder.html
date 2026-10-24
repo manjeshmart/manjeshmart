@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the founder and leadership team of MANJESH MART.">
+  <meta name="theme-color" content="#075b3b">
+  <title>Founder & Team | MANJESH MART</title>
+
+  <style>
+    :root {
+      --green: #075b3b;
+      --orange: #f58220;
+      --light: #f5faf6;
+      --text: #20352b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.7;
+    }
+
+    header {
+      background: #fff;
+      padding: 14px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid #e3ece5;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      color: var(--green);
+      font-size: 21px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .brand span { color: var(--orange); }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav a {
+      color: var(--green);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    nav a:hover { color: var(--orange); }
+
+    .hero {
+      text-align: center;
+      padding: 55px 20px 40px;
+      background: linear-gradient(135deg, #e7f4e9, #fff8ed);
+    }
+
+    .hero h1 {
+      color: var(--green);
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.2;
+      margin: 0 0 14px;
+    }
+
+    .hero h1 span { color: var(--orange); }
+
+    .hero p {
+      max-width: 650px;
+      margin: 8px auto;
+    }
+
+    .tagline {
+      color: var(--green);
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 38px 18px 55px;
+    }
+
+    .founder-card {
+      display: grid;
+      grid-template-columns: minmax(0, 320px) 1fr;
+      gap: 32px;
+      align-items: center;
+      background: #fff;
+      padding: 26px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px #153b2010;
+    }
+
+    .founder-photo {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 15px;
+      background: #e8eee9;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      color: var(--green);
+      line-height: 1.3;
+    }
+
+    .founder-card h2 {
+      font-size: clamp(28px, 4vw, 38px);
+      margin: 8px 0;
+    }
+
+    .role {
+      color: var(--orange);
+      font-weight: 700;
+      margin-top: 0;
+    }
+
+    .section-heading {
+      margin-top: 45px;
+      text-align: center;
+    }
+
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .team article {
+      background: #fff;
+      border: 1px solid #e2ece4;
+      border-radius: 16px;
+      padding: 24px;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .team article:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px #153b2010;
+    }
+
+    .team h3 {
+      color: var(--green);
+      margin: 0 0 6px;
+    }
+
+    .team p:last-child { margin-bottom: 0; }
+
+    .vision {
+      margin-top: 30px;
+      padding: 25px;
+      border-left: 4px solid var(--orange);
+      background: #fff;
+      border-radius: 10px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 26px;
+      color: var(--green);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      background: var(--green);
+      color: #fff;
+      padding: 28px 16px;
+    }
+
+    footer a { color: #fff; }
+
+    footer p { margin: 5px 0; }
+
+    @media (max-width: 650px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav { gap: 12px; }
+
+      .founder-card {
+        grid-template-columns: 1fr;
+        padding: 18px;
+      }
+
+      .founder-photo {
+        max-width: 330px;
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="brand" href="index.html">
+      MANJESH <span>MART</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about-us.html">About Us</a>
+      <a href="founder.html">Founder</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>The People Behind <span>MANJESH MART</span></h1>
+    <p>A Unit of Group Of MANJESH</p>
+    <p class="tagline">FRESH SAMAN, HAR GHAR TAK</p>
+  </section>
+
+  <main>
+    <section class="founder-card">
+      <!-- Founder photo will be connected after uploading it to GitHub -->
+      <img
+        class="founder-photo"
+        src="founder-photo.jpg"
+        alt="MANJESH Devang, Founder of MANJESH MART"
+      >
+
+      <div>
+        <div class="eyebrow">Founder & Leadership</div>
+        <h2>MANJESH Devang</h2>
+        <p class="role">Founder, MANJESH MART</p>
+
+        <p>
+          MANJESH MART is built around a simple goal: making everyday
+          groceries, fresh produce and household essentials easier to
+          access for local families.
+        </p>
+
+        <p>
+          Our focus is on convenient local delivery, working with local
+          suppliers and building a dependable grocery shopping experience.
+        </p>
+
+        <p>
+          We aim to grow step by step while keeping customer convenience,
+          service and trust at the heart of our work.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-heading">Our Leadership Team</h2>
+
+      <div class="team">
+        <article>
+          <h3>Rinki Devang</h3>
+          <p class="role">Co-Founder</p>
+          <p>
+            Supporting the growth and day-to-day operations of
+            MANJESH MART.
+          </p>
+        </article>
+
+        <article>
+          <h3>Ajit Devang</h3>
+          <p class="role">Technology Executive</p>
+          <p>
+            Supporting technology and digital development for
+            MANJESH MART.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="vision">
+      <h2>Our Vision</h2>
+      <p>
+        To build a trusted local grocery service that helps families
+        access everyday essentials conveniently and creates opportunities
+        for local suppliers and delivery partners.
+      </p>
+    </section>
+
+    <a class="back-link" href="index.html">← Back to Home</a>
+  </main>
+
+  <footer>
+    <p><strong>MANJESH MART</strong></p>
+    <p>FRESH SAMAN, HAR GHAR TAK</p>
+    <p>A Unit of Group Of MANJESH</p>
+    <p>
+      Email:
+      <a href="mailto:support.manjeshmart@gmail.com">
+        support.manjeshmart@gmail.com
+      </a>
+    </p>
+    <p><small>© MANJESH MART. All rights reserved.</small></p>
+  </footer>
+</body>
+</html>
