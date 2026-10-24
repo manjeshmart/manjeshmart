@@ -3,554 +3,814 @@
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>MANJESH MART | Fresh Saman, Har Ghar Tak</title>
-
-  <meta name="description" content="MANJESH MART से किराना, ताजी सब्जियां, फल और घरेलू जरूरतों का सामान घर बैठे मंगाएं। Fresh Saman, Har Ghar Tak.">
-
-  <meta name="theme-color" content="#14532d">
+  <title>MANJESH MART | Online Grocery & Home Delivery</title>
+  <meta name="description" content="MANJESH MART — Fresh Saman, Har Ghar Tak. किराना, फल, सब्जियां और रोजमर्रा की जरूरतों की स्थानीय डिलीवरी सेवा।">
+  <meta name="theme-color" content="#124b2c">
 
   <style>
     :root {
       --green: #14532d;
-      --dark: #103b24;
+      --deep: #0b3320;
       --orange: #f58220;
-      --light: #f5f8f2;
+      --cream: #f7f9f2;
       --white: #ffffff;
-      --text: #243329;
+      --text: #24352a;
+      --muted: #6d7b70;
+      --border: #e5ece4;
+      --shadow: 0 12px 35px rgba(15, 54, 29, .07);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 
     body {
       font-family: Arial, "Noto Sans Devanagari", sans-serif;
       color: var(--text);
-      background: var(--white);
       line-height: 1.7;
+      background: var(--white);
     }
 
-    a {
-      text-decoration: none;
-    }
+    a { text-decoration: none; color: inherit; }
+    button { font: inherit; }
+    img { max-width: 100%; }
 
-    .topbar {
-      background: var(--dark);
-      color: white;
+    .container { width: min(1160px, 90%); margin: auto; }
+
+    .announcement {
+      background: var(--deep);
+      color: #fff;
+      padding: 7px 12px;
       text-align: center;
-      padding: 8px 12px;
-      font-size: 13px;
-      letter-spacing: 0.4px;
-    }
-
-    header {
-      background: white;
-      padding: 15px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      border-bottom: 1px solid #e6eee5;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      color: var(--green);
-      font-size: 24px;
-      font-weight: 900;
-      letter-spacing: 0.5px;
-    }
-
-    .brand span {
-      color: var(--orange);
-    }
-
-    .brand small {
-      display: block;
-      font-size: 10px;
-      letter-spacing: 1px;
-      color: #647467;
-      font-weight: 600;
-    }
-
-    nav {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: var(--text);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    nav a:hover {
-      color: var(--orange);
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #f0f8ed, #fff8ed);
-      padding: 75px 7%;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      align-items: center;
-      gap: 35px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      background: #e0f1df;
-      color: var(--green);
-      padding: 6px 13px;
-      border-radius: 30px;
       font-size: 12px;
-      font-weight: 800;
-      margin-bottom: 18px;
+      letter-spacing: .4px;
     }
 
-    h1 {
-      font-size: clamp(34px, 5vw, 56px);
-      line-height: 1.18;
-      color: var(--dark);
-      margin-bottom: 20px;
+    .announcement strong { color: #ffb35e; }
+
+    .header {
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
     }
 
-    h1 span {
-      color: var(--orange);
-    }
-
-    .hero p {
-      max-width: 570px;
-      font-size: 17px;
-      color: #526256;
-      margin-bottom: 25px;
-    }
-
-    .actions {
+    .nav {
+      min-height: 82px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 8px;
-      font-weight: 800;
-      font-size: 14px;
-    }
-
-    .btn-primary {
-      background: var(--green);
-      color: white;
-    }
-
-    .btn-secondary {
-      border: 2px solid var(--green);
-      color: var(--green);
-    }
-
-    .hero-art {
-      background: white;
-      border: 2px solid #e2eddd;
-      border-radius: 28px;
-      padding: 30px 18px;
-      text-align: center;
-      box-shadow: 0 15px 40px #173e2010;
-    }
-
-    .hero-art .basket {
-      font-size: 100px;
-      line-height: 1.5;
-    }
-
-    .hero-art h2 {
-      color: var(--green);
-      font-size: 22px;
-    }
-
-    .hero-art p {
-      margin: 8px auto 0;
-      font-size: 14px;
-    }
-
-    section {
-      padding: 65px 7%;
-    }
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(26px, 4vw, 36px);
-      color: var(--dark);
-      margin-bottom: 10px;
-    }
-
-    .section-heading p {
-      color: #657267;
-      max-width: 650px;
-      margin: auto;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-content: space-between;
       gap: 20px;
     }
 
-    .service-card {
-      border: 1px solid #e5ece3;
-      border-radius: 16px;
-      padding: 25px 20px;
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      height: 45px;
+      width: 45px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: var(--green);
+      color: white;
+      font-size: 25px;
+      box-shadow: 0 5px 14px #14532d20;
+    }
+
+    .brand-name {
+      font-size: 21px;
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--green);
+      letter-spacing: -.5px;
+    }
+
+    .brand-name span { color: var(--orange); }
+
+    .brand-tagline {
+      font-size: 9px;
+      letter-spacing: 1px;
+      color: var(--muted);
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 700;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--orange); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 19px;
+      border-radius: 9px;
+      font-weight: 800;
+      font-size: 13px;
+      border: 1px solid transparent;
+      transition: transform .2s, background .2s;
+      cursor: pointer;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-green { background: var(--green); color: white; }
+    .btn-green:hover { background: var(--deep); }
+    .btn-outline { border-color: #b8cbbb; color: var(--green); background: white; }
+    .btn-orange { background: var(--orange); color: white; }
+
+    .hero {
+      overflow: hidden;
+      position: relative;
+      padding: 82px 0;
+      background:
+        radial-gradient(ellipse at 90% 10%, #f9e7ca 0, transparent 35%),
+        linear-gradient(120deg, #f1f8ee, #fffaf0);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e1f0df;
+      color: var(--green);
+      border: 1px solid #d3e7d1;
+      border-radius: 30px;
+      padding: 7px 13px;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .5px;
+      margin-bottom: 21px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #399b51;
+    }
+
+    h1 {
+      font-size: clamp(37px, 5vw, 62px);
+      line-height: 1.16;
+      letter-spacing: -1.6px;
+      color: var(--deep);
+      margin-bottom: 20px;
+    }
+
+    h1 span { color: var(--orange); }
+
+    .hero-copy {
+      max-width: 570px;
+      font-size: 16px;
+      color: #5e6f62;
+      margin-bottom: 27px;
+    }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .hero-note {
+      margin-top: 23px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .hero-visual {
+      min-height: 365px;
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+
+    .visual-circle {
+      width: min(335px, 100%);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #e0f0d8, #fff0d9);
+      border: 1px solid #e1e8d9;
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+
+    .basket-icon {
+      font-size: 120px;
+      filter: drop-shadow(0 12px 8px #163b251b);
+    }
+
+    .floating-card {
+      position: absolute;
       background: white;
-      transition: transform 0.2s;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 13px 16px;
+      box-shadow: var(--shadow);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .floating-card small {
+      display: block;
+      font-size: 10px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .float-one { left: -8px; top: 52px; }
+    .float-two { right: -5px; bottom: 50px; }
+
+    .trust-strip {
+      background: white;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 23px 0;
+      gap: 20px;
+    }
+
+    .trust-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .trust-icon {
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: var(--cream);
+      font-size: 21px;
+    }
+
+    .trust-item strong { display: block; font-size: 13px; color: var(--green); }
+    .trust-item small { color: var(--muted); font-size: 11px; }
+
+    .section { padding: 78px 0; }
+
+    .section-soft { background: var(--cream); }
+
+    .section-head {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 38px;
+    }
+
+    .section-label {
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+
+    .section-head h2 {
+      color: var(--deep);
+      font-size: clamp(28px, 4vw, 39px);
+      line-height: 1.3;
+      margin: 8px 0 13px;
+    }
+
+    .section-head p { color: var(--muted); font-size: 14px; }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      padding: 28px 25px;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      background: white;
+      box-shadow: 0 4px 15px #173d2010;
+      transition: transform .25s, box-shadow .25s;
     }
 
     .service-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
     }
 
     .service-icon {
-      font-size: 38px;
-      margin-bottom: 12px;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: #edf5e9;
+      font-size: 29px;
+      margin-bottom: 19px;
     }
 
-    .service-card h3 {
-      color: var(--green);
-      margin-bottom: 8px;
-      font-size: 19px;
+    .service-card h3 { color: var(--green); font-size: 18px; margin-bottom: 9px; }
+    .service-card p { color: var(--muted); font-size: 13px; }
+    .card-link { display: inline-block; color: var(--green); font-size: 12px; font-weight: 800; margin-top: 18px; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 55px;
+      align-items: center;
     }
 
-    .service-card p {
-      font-size: 14px;
-      color: #637064;
-    }
-
-    .about {
-      background: var(--light);
-    }
-
-    .about-inner {
-      max-width: 850px;
-      margin: auto;
+    .about-art {
+      min-height: 320px;
+      border-radius: 24px;
+      background: linear-gradient(145deg, #e4f1dd, #fff0db);
+      display: grid;
+      place-items: center;
+      padding: 25px;
       text-align: center;
     }
 
-    .about-inner h2 {
-      color: var(--green);
-      font-size: 30px;
-      margin-bottom: 15px;
+    .about-art .big-icon { font-size: 85px; }
+    .about-art h3 { color: var(--green); font-size: 23px; margin-top: 5px; }
+    .about-art p { color: var(--muted); font-size: 12px; }
+
+    .about-copy h2 {
+      color: var(--deep);
+      font-size: clamp(27px, 4vw, 37px);
+      line-height: 1.3;
+      margin: 12px 0 17px;
     }
 
-    .about-inner p {
-      margin-bottom: 12px;
-    }
+    .about-copy p { color: var(--muted); font-size: 14px; margin-bottom: 13px; }
 
-    .promise {
+    .check-list { list-style: none; margin: 20px 0 25px; }
+    .check-list li { margin: 10px 0; font-size: 13px; font-weight: 700; }
+    .check-list li::before { content: "✓"; color: #23834a; font-weight: 900; margin-right: 10px; }
+
+    .area-panel {
+      padding: 35px;
+      border-radius: 22px;
       background: var(--green);
       color: white;
-      text-align: center;
-      padding: 48px 7%;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 25px;
+      align-items: center;
     }
 
-    .promise h2 {
-      font-size: 29px;
-      margin-bottom: 10px;
+    .area-panel h2 { font-size: 28px; margin: 9px 0; }
+    .area-panel p { color: #d9e9dc; font-size: 13px; max-width: 600px; }
+    .area-panel .section-label { color: #ffbd7b; }
+
+    .partner-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
     }
 
-    .promise p {
-      color: #e5f1e5;
+    .partner-card {
+      padding: 29px;
+      border-radius: 17px;
+      border: 1px solid var(--border);
+      background: white;
     }
 
-    .contact {
-      text-align: center;
-    }
+    .partner-card h3 { color: var(--green); font-size: 19px; margin: 12px 0 8px; }
+    .partner-card p { color: var(--muted); font-size: 13px; margin-bottom: 19px; }
 
-    .contact h2 {
-      color: var(--green);
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
+    .faq-list { max-width: 800px; margin: auto; }
+    details { border-bottom: 1px solid var(--border); padding: 19px 0; }
+    summary { cursor: pointer; font-weight: 800; color: var(--green); font-size: 14px; }
+    details p { color: var(--muted); font-size: 13px; padding-top: 12px; }
 
-    .contact p {
-      margin-bottom: 10px;
-    }
-
-    footer {
-      background: #102c1c;
-      color: white;
-      padding: 35px 7% 20px;
-      text-align: center;
-    }
-
-    footer .brand {
-      color: white;
-      display: inline-block;
-      margin-bottom: 12px;
-    }
-
-    footer p {
-      font-size: 13px;
-      color: #d2dfd4;
-      margin: 5px 0;
-    }
-
-    .footer-links {
+    .cta { padding: 65px 0; background: #fff5e8; }
+    .cta-box {
       display: flex;
-      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+    .cta h2 { color: var(--deep); font-size: clamp(25px, 4vw, 36px); }
+    .cta p { color: var(--muted); font-size: 13px; margin-top: 7px; }
+
+    .footer {
+      background: #0b291a;
+      color: white;
+      padding: 60px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 35px;
+      padding-bottom: 42px;
+    }
+
+    .footer .brand-name { color: white; }
+    .footer .brand-tagline { color: #c2d2c5; }
+    .footer-about { color: #bdcfc0; font-size: 12px; margin: 18px 0; max-width: 290px; }
+    .footer h3 { font-size: 14px; margin-bottom: 18px; color: white; }
+    .footer-links { display: grid; gap: 10px; }
+    .footer-links a, .footer-contact p { color: #bdcfc0; font-size: 12px; }
+    .footer-links a:hover { color: #ffb56c; }
+    .footer-contact p { margin-bottom: 10px; overflow-wrap: anywhere; }
+
+    .socials { display: flex; gap: 9px; margin-top: 17px; }
+    .socials a {
+      display: grid;
+      place-items: center;
+      height: 36px;
+      width: 36px;
+      border: 1px solid #49624f;
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #294532;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
       flex-wrap: wrap;
-      gap: 16px;
-      margin: 18px 0;
+      color: #a9c0ad;
+      font-size: 11px;
     }
 
-    .footer-links a {
-      color: #ffffff;
-      font-size: 13px;
+    .footer-bottom a { color: #dbe8dd; }
+
+    .mobile-bar { display: none; }
+
+    @media (max-width: 900px) {
+      .nav-links { gap: 13px; }
+      .nav-links a { font-size: 12px; }
+      .hero-grid { gap: 25px; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
-    .copyright {
-      border-top: 1px solid #36513e;
-      margin-top: 20px;
-      padding-top: 18px;
+    @media (max-width: 650px) {
+      .container { width: 91%; }
+      .announcement { font-size: 10px; }
+      .nav { min-height: 72px; flex-wrap: wrap; padding: 12px 0; gap: 12px; }
+      .brand-mark { width: 39px; height: 39px; font-size: 21px; }
+      .brand-name { font-size: 18px; }
+      .brand-tagline { font-size: 8px; }
+      .nav-links { width: 100%; overflow-x: auto; gap: 21px; padding: 3px 0 8px; }
+      .nav-links a { white-space: nowrap; }
+      .nav > .btn { display: none; }
+
+      .hero { padding: 49px 0 42px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 20px; }
+      .hero-copy { font-size: 14px; }
+      h1 { font-size: clamp(36px, 10vw, 48px); }
+      .hero-visual { min-height: 275px; }
+      .visual-circle { width: 250px; }
+      .basket-icon { font-size: 90px; }
+      .float-one { left: 0; top: 30px; }
+      .float-two { right: 0; bottom: 24px; }
+
+      .trust-grid { grid-template-columns: 1fr; gap: 16px; padding: 22px 0; }
+      .trust-item { justify-content: flex-start; }
+      .section { padding: 55px 0; }
+      .card-grid { grid-template-columns: 1fr; gap: 15px; }
+      .service-card { padding: 23px; }
+      .about-grid { grid-template-columns: 1fr; gap: 30px; }
+      .about-art { min-height: 240px; }
+      .about-art .big-icon { font-size: 65px; }
+      .area-panel { grid-template-columns: 1fr; padding: 26px; }
+      .area-panel h2 { font-size: 25px; }
+      .partner-grid { grid-template-columns: 1fr; }
+      .cta-box { flex-direction: column; align-items: flex-start; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+      .footer-grid > div:first-child { grid-column: 1 / -1; }
+      .footer { padding-top: 43px; }
+      .footer-bottom { flex-direction: column; }
     }
 
-    @media (max-width: 760px) {
-      header {
-        justify-content: center;
-        text-align: center;
-      }
-
-      nav {
-        justify-content: center;
-        gap: 12px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 50px 6%;
-        text-align: center;
-      }
-
-      .hero p {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .actions {
-        justify-content: center;
-      }
-
-      .hero-art {
-        max-width: 400px;
-        margin: auto;
-        width: 100%;
-      }
-
-      .services {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 48px 6%;
-      }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
     }
   </style>
 </head>
 
 <body>
-
-  <div class="topbar">
-    A Unit of Group Of MANJESH
+  <div class="announcement">
+    <strong>MANJESH MART</strong> &nbsp; | &nbsp; A Unit of Group Of MANJESH
   </div>
 
-  <header>
-    <a class="brand" href="index.html">
-      MANJESH <span>MART</span>
-      <small>FRESH SAMAN, HAR GHAR TAK</small>
-    </a>
+  <header class="header">
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="MANJESH MART Home">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>
+          <span class="brand-name">MANJESH <span>MART</span></span>
+          <span class="brand-tagline">FRESH SAMAN, HAR GHAR TAK</span>
+        </span>
+      </a>
 
-    <nav aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#areas">Our Areas</a>
+        <a href="#partners">Partnership</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#services" class="btn btn-green">Explore Services ↗</a>
+    </div>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div>
-        <span class="eyebrow">YOUR LOCAL GROCERY PARTNER</span>
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> YOUR LOCAL GROCERY PARTNER</div>
 
-        <h1>
-          ताज़ा सामान,<br>
-          <span>हर घर तक!</span>
-        </h1>
+          <h1>ताज़ा सामान,<br><span>हर घर तक!</span></h1>
 
-        <p>
-          किराना, ताजी सब्जियां, फल और रोज़मर्रा की
-          जरूरतों का सामान — आपके घर तक पहुंचाने की
-          हमारी कोशिश, भरोसे और सुविधा के साथ।
-        </p>
+          <p class="hero-copy">
+            किराना, ताजी सब्जियां, फल और रोजमर्रा की जरूरतों का सामान।
+            MANJESH MART के साथ अपनी खरीदारी को बनाइए आसान,
+            सुविधाजनक और भरोसेमंद।
+          </p>
 
-        <div class="actions">
-          <a class="btn btn-primary" href="#services">
-            हमारी सेवाएं देखें
-          </a>
+          <div class="hero-actions">
+            <a href="#services" class="btn btn-green">हमारी सेवाएं देखें →</a>
+            <a href="#contact" class="btn btn-outline">संपर्क करें</a>
+          </div>
 
-          <a class="btn btn-secondary" href="#contact">
-            संपर्क करें
-          </a>
+          <p class="hero-note">स्थानीय सेवा • रोजमर्रा की जरूरतें • घर तक डिलीवरी</p>
+        </div>
+
+        <div class="hero-visual" aria-label="Grocery shopping illustration">
+          <div class="visual-circle">
+            <div class="basket-icon" aria-hidden="true">🛒</div>
+          </div>
+          <div class="floating-card float-one">🥬 ताजी सब्जियां<small>उपलब्धता के अनुसार</small></div>
+          <div class="floating-card float-two">🏠 Home Delivery<small>स्थानीय सेवा क्षेत्र में</small></div>
         </div>
       </div>
-
-      <div class="hero-art">
-        <div class="basket" aria-hidden="true">🛒</div>
-        <h2>MANJESH MART</h2>
-        <p>आपकी रोज़मर्रा की खरीदारी, अब आसान।</p>
-      </div>
     </section>
 
-    <section id="services">
-      <div class="section-heading">
-        <h2>हमारी सेवाएं</h2>
-        <p>
-          आपकी रोज़मर्रा की जरूरतों के लिए एक ही जगह
-          पर उपयोगी स्थानीय डिलीवरी सेवाएं।
-        </p>
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <span class="trust-icon">🛍️</span>
+          <span><strong>रोजमर्रा की खरीदारी</strong><small>जरूरी सामान एक जगह</small></span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">🤝</span>
+          <span><strong>स्थानीय सहयोग</strong><small>स्थानीय सप्लायरों के साथ</small></span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">🚚</span>
+          <span><strong>घर तक डिलीवरी</strong><small>सेवा क्षेत्र के अनुसार</small></span>
+        </div>
       </div>
-
-      <div class="services">
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true">🛍️</div>
-          <h3>ऑनलाइन किराना</h3>
-          <p>
-            घर बैठे रोज़मर्रा के किराना और जरूरी सामान
-            मंगाने की सुविधाजनक सेवा।
-          </p>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true">🥦</div>
-          <h3>ताजी सब्जियां और फल</h3>
-          <p>
-            आपकी जरूरतों के अनुसार फल और सब्जियां
-            उपलब्ध कराने की कोशिश।
-          </p>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true">🚚</div>
-          <h3>होम डिलीवरी</h3>
-          <p>
-            उपलब्धता और सेवा क्षेत्र के अनुसार
-            आपके घर तक सामान पहुंचाने की सुविधा।
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <div class="about-inner">
-        <h2>MANJESH MART के बारे में</h2>
-        <p>
-          MANJESH MART एक स्थानीय किराना और घरेलू
-          जरूरतों की डिलीवरी सेवा है। हमारा उद्देश्य
-          ग्राहकों को उनकी रोज़मर्रा की खरीदारी में
-          सुविधा देना और स्थानीय सप्लायरों के साथ
-          मिलकर काम करना है।
-        </p>
-        <p>
-          हम बेहतर सेवा, ग्राहकों के भरोसे और
-          सुविधाजनक खरीदारी को प्राथमिकता देते हैं।
-        </p>
-        <strong>FRESH SAMAN, HAR GHAR TAK</strong>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-heading">
-        <h2>हमारा उद्देश्य</h2>
-        <p>
-          स्थानीय परिवारों की रोज़मर्रा की खरीदारी
-          को आसान बनाना और भरोसेमंद सेवा देना।
-        </p>
-      </div>
-
-      <div class="services">
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true">🤝</div>
-          <h3>भरोसा</h3>
-          <p>ग्राहकों के साथ पारदर्शी और सम्मानजनक व्यवहार।</p>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true">🏪</div>
-          <h3>स्थानीय सहयोग</h3>
-          <p>स्थानीय दुकानदारों और सप्लायरों के साथ जुड़ाव।</p>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true">💚</div>
-          <h3>ग्राहक सुविधा</h3>
-          <p>खरीदारी और डिलीवरी को अधिक सुविधाजनक बनाने का प्रयास।</p>
-        </article>
-      </div>
-    </section>
-
-    <div class="promise">
-      <h2>आपका भरोसा, हमारी जिम्मेदारी</h2>
-      <p>MANJESH MART — FRESH SAMAN, HAR GHAR TAK</p>
     </div>
 
-    <section class="contact" id="contact">
-      <h2>हमसे संपर्क करें</h2>
-      <p>ऑर्डर, सेवा या पार्टनरशिप संबंधी जानकारी के लिए संपर्क करें।</p>
-      <p>
-        ईमेल:
-        <a href="mailto:support.manjeshmart@gmail.com">
-          support.manjeshmart@gmail.com
-        </a>
-      </p>
-      <p>सेवा क्षेत्र: सिकटा और शांति चौक — उपलब्धता के अनुसार।</p>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">WHAT WE OFFER</span>
+          <h2>आपकी जरूरतें, हमारी सेवाएं</h2>
+          <p>रोजमर्रा की खरीदारी को आसान बनाने के लिए उपयोगी स्थानीय सेवाएं।</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="service-card">
+            <div class="service-icon">🛍️</div>
+            <h3>ऑनलाइन किराना</h3>
+            <p>घर की रोजमर्रा की जरूरतों के लिए किराना और आवश्यक सामान मंगाने की सुविधा।</p>
+            <a class="card-link" href="#contact">जानकारी लें ↗</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🥦</div>
+            <h3>फल और सब्जियां</h3>
+            <p>उपलब्धता के अनुसार ताजी सब्जियां और फल आपकी खरीदारी के लिए।</p>
+            <a class="card-link" href="#contact">जानकारी लें ↗</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🚚</div>
+            <h3>होम डिलीवरी</h3>
+            <p>निर्धारित सेवा क्षेत्र और उपलब्धता के अनुसार आपके घर तक सामान पहुंचाने की कोशिश।</p>
+            <a class="card-link" href="#areas">सेवा क्षेत्र देखें ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="about">
+      <div class="container about-grid">
+        <div class="about-art">
+          <div>
+            <div class="big-icon">🛒</div>
+            <h3>MANJESH MART</h3>
+            <p>FRESH SAMAN, HAR GHAR TAK</p>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <span class="section-label">ABOUT OUR COMPANY</span>
+          <h2>स्थानीय खरीदारी को आसान बनाने की एक पहल</h2>
+          <p>
+            MANJESH MART एक स्थानीय किराना और घरेलू जरूरतों की
+            डिलीवरी सेवा है। हमारा उद्देश्य ग्राहकों को खरीदारी में
+            सुविधा देना और स्थानीय सप्लायरों के साथ मिलकर काम करना है।
+          </p>
+          <p>
+            हम ग्राहकों के भरोसे, उपयोगी सेवा और स्पष्ट जानकारी को
+            प्राथमिकता देते हैं।
+          </p>
+          <ul class="check-list">
+            <li>रोजमर्रा की जरूरतों पर ध्यान</li>
+            <li>स्थानीय दुकानदारों और सप्लायरों से सहयोग</li>
+            <li>ग्राहक सुविधा और भरोसे को प्राथमिकता</li>
+          </ul>
+          <a href="#contact" class="btn btn-green">हमसे जुड़ें →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="areas">
+      <div class="container">
+        <div class="area-panel">
+          <div>
+            <span class="section-label">OUR SERVICE AREA</span>
+            <h2>आपके आसपास, आपकी सुविधा के लिए</h2>
+            <p>
+              हमारी स्थानीय डिलीवरी सेवा सिकटा और शांति चौक के
+              निर्धारित क्षेत्रों में उपलब्धता के अनुसार संचालित होती है।
+              ऑर्डर करने से पहले अपने क्षेत्र की उपलब्धता की पुष्टि करें।
+            </p>
+          </div>
+          <a href="#contact" class="btn btn-orange">क्षेत्र की जानकारी लें ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="partners">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">GROW WITH US</span>
+          <h2>MANJESH MART के साथ जुड़ें</h2>
+          <p>स्थानीय व्यापार और डिलीवरी नेटवर्क के विकास में भागीदार बनें।</p>
+        </div>
+
+        <div class="partner-grid">
+          <article class="partner-card">
+            <div class="service-icon">🏪</div>
+            <h3>Supplier & Shop Partners</h3>
+            <p>स्थानीय दुकानदार और सप्लायर हमारे साथ जुड़ने के लिए संपर्क कर सकते हैं। साझेदारी उपलब्धता और शर्तों के अधीन होगी।</p>
+            <a class="btn btn-outline" href="mailto:support.manjeshmart@gmail.com?subject=MANJESH%20MART%20Supplier%20Partnership">पार्टनरशिप पूछें ↗</a>
+          </article>
+
+          <article class="partner-card">
+            <div class="service-icon">🛵</div>
+            <h3>Delivery Partner</h3>
+            <p>डिलीवरी पार्टनर बनने के अवसरों की जानकारी के लिए हमें ईमेल करें। अवसर क्षेत्र और जरूरत के अनुसार होंगे।</p>
+            <a class="btn btn-outline" href="mailto:support.manjeshmart@gmail.com?subject=MANJESH%20MART%20Delivery%20Partner">रुचि दर्ज करें ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">HELP CENTRE</span>
+          <h2>अक्सर पूछे जाने वाले सवाल</h2>
+          <p>MANJESH MART की सेवाओं के बारे में सामान्य जानकारी।</p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>MANJESH MART क्या है?</summary>
+            <p>यह किराना, फल, सब्जियां और रोजमर्रा की जरूरतों के सामान के लिए स्थानीय डिलीवरी सेवा है।</p>
+          </details>
+          <details>
+            <summary>क्या मेरे इलाके में डिलीवरी उपलब्ध है?</summary>
+            <p>डिलीवरी सिकटा और शांति चौक के निर्धारित क्षेत्रों में उपलब्धता के अनुसार होती है। ऑर्डर से पहले अपने क्षेत्र की पुष्टि करें।</p>
+          </details>
+          <details>
+            <summary>सप्लायर या डिलीवरी पार्टनर कैसे जुड़ सकते हैं?</summary>
+            <p>अपनी जानकारी support.manjeshmart@gmail.com पर भेजें। हमारी टीम उपलब्ध अवसरों और शर्तों के अनुसार जवाब दे सकती है।</p>
+          </details>
+          <details>
+            <summary>ऑर्डर या सहायता के लिए कैसे संपर्क करें?</summary>
+            <p>आप support.manjeshmart@gmail.com पर ईमेल कर सकते हैं।</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-box">
+        <div>
+          <span class="section-label">LET'S CONNECT</span>
+          <h2>आपकी सुविधा, हमारा प्रयास।</h2>
+          <p>ऑर्डर, सेवा और साझेदारी से जुड़ी जानकारी के लिए संपर्क करें।</p>
+        </div>
+        <a class="btn btn-green" href="mailto:support.manjeshmart@gmail.com">ईमेल से संपर्क करें ↗</a>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <a class="brand" href="#home">
-      MANJESH <span>MART</span>
-    </a>
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#home" class="brand">
+            <span class="brand-mark">M</span>
+            <span>
+              <span class="brand-name">MANJESH <span>MART</span></span>
+              <span class="brand-tagline">FRESH SAMAN, HAR GHAR TAK</span>
+            </span>
+          </a>
 
-    <p>A Unit of Group Of MANJESH</p>
-    <p>FRESH SAMAN, HAR GHAR TAK</p>
+          <p class="footer-about">
+            आपकी रोजमर्रा की खरीदारी को सुविधाजनक बनाने की एक स्थानीय पहल।
+            भरोसा, सुविधा और स्थानीय सहयोग — हमारी प्राथमिकता।
+          </p>
+          <p class="footer-about"><strong>A Unit of Group Of MANJESH</strong></p>
+        </div>
 
-    <div class="footer-links">
-      <a href="#about">About Us</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </div>
+        <div>
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Our Services</a>
+            <a href="#areas">Operating Areas</a>
+            <a href="#partners">Partner With Us</a>
+            <a href="#faq">FAQs</a>
+          </div>
+        </div>
 
-    <div class="copyright">
-      <p>© <span id="year"></span> MANJESH MART. All rights reserved.</p>
+        <div>
+          <h3>Customer Support</h3>
+          <div class="footer-links">
+            <a href="mailto:support.manjeshmart@gmail.com">Contact Support</a>
+            <a href="mailto:support.manjeshmart@gmail.com?subject=Feedback%20for%20MANJESH%20MART">Feedback</a>
+            <a href="mailto:support.manjeshmart@gmail.com?subject=Careers%20at%20MANJESH%20MART">Career Enquiry</a>
+            <a href="#faq">Help & FAQs</a>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Get In Touch</h3>
+          <p>✉ support.manjeshmart@gmail.com</p>
+          <p>📍 Service area: Sikta & Shanti Chowk, Bihar</p>
+          <p>🕒 Delivery depends on local availability.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/manjeshmart.in/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+            <a href="https://www.youtube.com/@manjesh-mart" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> MANJESH MART. All rights reserved.</span>
+        <span>Made for local convenience with <span style="color:#ff9a45">♥</span></span>
+        <a href="#home">Back to Top ↑</a>
+      </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
